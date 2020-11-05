@@ -169,3 +169,124 @@ body {
     opacity: 1;
   }
   
+  .menu-topcontainer{
+    margin: 10px 10px 10px 10px;
+    padding-left: 20px;
+  }
+
+  .menu-topcontainer a{
+    color: #fff;
+    float: right;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .menu-topcontainer a:hover{
+    background-color:  rgba(255, 255, 255, 0.2);
+  }
+
+  .menu-topcontainer img{
+    width: 160px;
+    height: 100px;
+    float: left;
+    margin-left: 20px;
+  }
+
+  .menu-topcontainer input[type=search]{
+    padding: 20px;
+    margin: 20px 20px 0 100px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    width: 750px;
+    height: 40px;
+  }
+
+  .menu-kategori p{
+    position: absolute;
+    left: 300px;
+    display: block;
+    margin-top: 100px;
+  }
+
+  .menu-kategori a{
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .menu-kategori a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .search-container{
+    margin-left: 20px;
+  }
+  .search-filter{
+    margin-top: 120px;
+  }
+  
+  .search-filter p{
+    color: #fff;
+    font-size: 20px;
+    float: left;
+    margin-right: 15px;
+  }
+  .search-filter a{
+    margin-top: 10px;
+    float: left;
+    padding: 10px 20px;
+    font-size: 15px;
+    margin-left: 10px;
+    color: #f1f1f1;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .search-filter a:hover{
+    background-color: rgba(0,0,0,1);
+  }
+
+  .search-result p{
+   margin-top: 70px;
+   color: #fff;
+   letter-spacing: 3px;
+  }
+
+  .info-container table{
+    position: absolute;
+    top: 150px;
+    left: 280px;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+  }
+
+  .webinar-img{
+    border-color: #fff;
+  }
+
+  .info-beli{
+    margin-top: 480px;
+  }
+
+  .info-beli p{
+    text-align: center;
+    display: block;
+  }
+
+  .info-beli a{
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 10px 30px;
+    margin: 0px 30px;
+  }
+
+  .info-beli a:hover{
+    background-color: rgba(0,0,0,1);
+  }
