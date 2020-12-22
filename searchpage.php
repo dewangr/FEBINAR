@@ -11,6 +11,10 @@ while($pecah = $ambil->fetch_assoc()){
 
 <head>
     <style>
+        .utama{
+            margin-top:50px;
+            margin-bottom:250px;
+        }
         .search-filter a{
             text-decoration:none;
             margin-top: 10px;
@@ -45,7 +49,7 @@ while($pecah = $ambil->fetch_assoc()){
                     <div class="card">
                         <img class="card-img-top" src="foto-webinar/<?= $value['pr_gambar']?>" alt="Card image cap">
                         <div class="card-body h-100">
-                            <h5 class="card-title"><a href="detailwebinar.php?&id=<?=$value['pr_id']?>"><?= $value['pr_nama']?></a></h5>
+                            <h5 class="card-title"><a href="detailwebinar.php?&id=<?=$value['pr_id']?>"><?= $value['pr_nama']?></a></h5><br>
                             <h6 class="card-title">Rp. <?= number_format($value['pr_harga'])?></h6>
                             <a href="detail.php?&id=<?=$value['id_produk']?>" class="btn btn-secondary">Detail</a>
                         </div>
@@ -56,4 +60,4 @@ while($pecah = $ambil->fetch_assoc()){
         </div>
     </div>
 </div>
-<?php include 'footer.php';?>
+<div class="footer"><?php include 'footer.php';?></div>
