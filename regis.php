@@ -1,6 +1,8 @@
 <?php 
-include 'koneksi.php';
-
+    include 'koneksi.php';
+    $query = mysqli_fetch_array(mysqli_query($koneksi,"SELECT max(id_user) as kodemax FROM data_user"));
+    $kode= $query['kodemax'];
+    $idmax = $kode+1;
     if(isset($_POST["signup"])){
         $username= strtolower(stripslashes($_POST['username']));
         $email = $_POST['email'];
@@ -42,7 +44,7 @@ include 'koneksi.php';
                                 VALUES ('', '$username', '$password', '$email', '$lvluser','non')");
             echo "<script>
                     alert('User berhasil ditambahkan. Validasi data untuk menyelesaikan proses pendaftaran'); 
-                    location='validasi.php?username=$username';
+                    location='validasi.php?id=$idmax';
                 </script>";
         }
     }
