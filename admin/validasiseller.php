@@ -51,9 +51,9 @@
 				<td><?= $data['alamat_seller'] ?></td>
 				<td><?= $data['no_rek_seller'] ?></td>
 				<td><?= $data['tlp_seller'] ?></td>
-				<td><?= $data['foto_ktp'] ?></td>
-				<td><?= $data['foto_dg_ktp'] ?></td>
-				<td><?= $data['rekening'] ?></td>
+				<td><img style="height:120px;" src="../data-foto-penjual/<?= $data['foto_ktp'] ?>" alt=""></td>
+				<td><img style="height:120px;" src="../data-foto-penjual/<?= $data['foto_dg_ktp'] ?>" alt=""></td>
+				<td><img style="height:120px;" src="../data-foto-penjual/<?= $data['rekening'] ?>" alt=""></td>
 				<td><button class="btn btn-info" type="submit"><a style="color:white;" href="accept.php?username_seller=<?php echo $data['username_user']?>"><span><i class="fa fa-check"></i></span></a></button></td>
 			</tr>
             <?php $no++; 
