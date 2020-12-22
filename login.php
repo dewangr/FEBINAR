@@ -10,6 +10,7 @@ session_start();
 
     if(mysqli_num_rows($cek) == 1){
         $result = mysqli_fetch_assoc($cek);
+        $idkirim= $result['id_user'];
         if($result['level_user'] == 'provider'){
             if($result['keterangan_acc'] == 'acc'){
                 if(password_verify($password,$result['password_user'])){
@@ -23,7 +24,7 @@ session_start();
                     $_SESSION["login"] = true;
                     $_SESSION["username"] = $result['username_user'];
                     echo "<script>alert('Akun Anda belum tervalidasi. Mohon validasi akun terlebih dahulu untuk melanjutkan.');
-                        location='validasi.php?username=$username';
+                        location='validasi.php?id=$idkirim';
                     </script>";
                 }
             }
