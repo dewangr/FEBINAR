@@ -1,7 +1,8 @@
 <?php include 'koneksi.php';?>
 <?php 
-$username=$_GET['username'];
+$id=$_GET['id'];
     if( isset($_POST["kirim"])) {
+        $id_user = $_POST['id'];
         $username = $_POST['username'];
         $fullname = $_POST['name'];
         $alamat = $_POST['alamat'];
@@ -12,7 +13,6 @@ $username=$_GET['username'];
         $fotorek = $_POST['atm'];
 
         $cek = mysqli_query("SELECT * FROM validasi_seller WHERE nama_seller='$fullname");
-
         if(mysqli_fetch_assoc($cek)){
             echo "<script> alert('data sudah digunakan.');
                     location='validasi.php';
@@ -20,10 +20,10 @@ $username=$_GET['username'];
             exit;
         }
         else{
-            mysqli_query($koneksi,"INSERT INTO `validasi_seller`(`username_seller`, `nama_seller`, `alamat_seller`, `no_rek_seller`, `tlp_seller`, `foto_ktp`, `foto_dg_ktp`, `rekening`) 
-                        VALUES ('$username','$fullname','$alamat','$norek','$tlp','$ktp','$dgktp','$fotorek')");
+            mysqli_query($koneksi,"INSERT INTO validasi_seller (`id_user`,`username_seller`, `nama_seller`, `alamat_seller`, `no_rek_seller`, `tlp_seller`, `foto_ktp`, `foto_dg_ktp`, `rekening`) 
+                    VALUES ($id_user,'$username','$fullname','$alamat','$norek','$tlp','$ktp','$dgktp','$fotorek')");
             echo "<script> alert('Data Anda berhasil dimasukkan. Mohon tunggu proses verivikasi. Terimakasih');
-                    location='index.php';
+                    location='logout.php';
                 </script>";
         }
     }
@@ -31,7 +31,9 @@ $username=$_GET['username'];
 ?>
 <?php 
     
-    $id = mysqli_query($koneksi,"SELECT id_user FROM data_user WHERE username_user='$username'");
+    $ambil = mysqli_fetch_assoc(mysqli_query($koneksi,"SELECT * FROM data_user WHERE id_user='$id'"));
+    $username = $ambil['username_user'];
+    $idwebinar = $ambil['id_user'];
 ?>
 <?php include 'navbar.php';?>
 <head>
@@ -47,6 +49,7 @@ $username=$_GET['username'];
             <h3 class="card-header text-center">Validate your account</h3>
             <div class="card-body">
                 <form action="" method="post">
+                    <input type="hidden" name="id" value="<?= $idwebinar ?>">
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label for="name">Username</label>
@@ -121,3 +124,4 @@ $username=$_GET['username'];
         </div>
     </div>
 </div>
+<?php include 'footer.php';?>
