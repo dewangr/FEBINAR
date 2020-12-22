@@ -10,6 +10,12 @@ if(empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        .utama{
+                margin-top:70px;
+                margin-bottom:250px;
+            }
+    </style>
  	<link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
@@ -19,7 +25,7 @@ if(empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"])) {
 </head>
 
 <body>
-	 <div class="container mt-5">
+	 <div class="container mt-5 utama">
 	 <h3 style="margin-top:50px;">Keranjang Belanja Anda</h3>
             <table class="table table-striped mt-5">
                 <thead>
