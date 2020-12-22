@@ -34,8 +34,8 @@ if(!isset($_SESSION['keranjang']) OR (empty($_SESSION['keranjang']))){
       $nmrek = $_POST['nmrek'];
       $bank = $_POST['bank'];
       
-      mysqli_query($koneksi, "INSERT INTO listpembelian (`id_pembelian`,`tanggal_pembelian`, `total_harga`, `nama_pembeli`, `email_pembeli`, `tlp_pembeli`, `rek`, `nama_rek`, `id_bank`, `status`) 
-              VALUES ('$id','$tanggal', '$totalharga', '$nama','$email','$tlp', '$rek', '$nmrek', '$bank', 'pending')");
+      mysqli_query($koneksi, "INSERT INTO listpembelian (`tanggal_pembelian`, `total_harga`, `nama_pembeli`, `email_pembeli`, `tlp_pembeli`, `rek`, `nama_rek`, `id_bank`, `status`) 
+              VALUES ('$tanggal', '$totalharga', '$nama','$email','$tlp', '$rek', '$nmrek', '$bank', 'pending')");
 
       echo "<script>alert('Pembelian berhasil dilakukan. Silahkan lanjutkan ke pembayaran');
           location='done.php?id_pembelian=$id';</script>";
@@ -46,7 +46,12 @@ if(!isset($_SESSION['keranjang']) OR (empty($_SESSION['keranjang']))){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <style>
+      .utama{
+            margin-top:50px;
+            margin-bottom:250px;
+        }
+    </style>
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
@@ -56,7 +61,7 @@ if(!isset($_SESSION['keranjang']) OR (empty($_SESSION['keranjang']))){
     <div id="wrapper">
 				
 		<!-- start: Container -->
-		<div class="container" style="margin-top:100px;">
+		<div class="container utama">
 
 			<!-- start: Table -->
                 <div class="table-responsive">
