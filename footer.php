@@ -27,7 +27,7 @@
                     <li><a class="text-muted" style="text-decoration:none;" href="">About us</a></li>
                     <li><a class="text-muted" style="text-decoration:none;" href="">Terms & Privacy</a></li>
                     <li><a class="text-muted" style="text-decoration:none;" href="">FAQs</a></li>
-                    <li><a href="login-admin.php" class="text-muted" style="text-decoration:none;" href="">Admin Login</a></li>
+                    <li><a href="login-admin.php" class="text-muted" style="text-decoration:none;">Admin Login</a></li>
             </div>
             <div class="col">
                 <h5>Follow us</h5>
