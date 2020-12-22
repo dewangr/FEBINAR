@@ -4,6 +4,10 @@ session_start();
 <?php include 'navbar.php';?>
 <head>
     <style>
+        .utama{
+            margin-top:50px;
+            margin-bottom:250px;
+        }
         .left-category a{
             text-decoration:none;
             color:rgb(22,33,62);
