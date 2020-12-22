@@ -7,6 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
+	<style>
+		.utama{
+            margin-top:50px;
+            margin-bottom:250px;
+        }
+	</style>
 </head>
 <body>
 	<!-- start: Page Title -->
@@ -31,7 +37,7 @@
 	<div id="wrapper">
 				
 		<!-- start: Container -->
-		<div class="container pt-2">
+		<div class="container pt-2 utama">
 
 			<!-- start: Table -->
                 <div class="table-responsive">
