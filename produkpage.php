@@ -4,6 +4,10 @@ session_start();
 <?php include 'navbar.php';?>
 <head>
     <style>
+        .utama{
+            margin-top:50px;
+            margin-bottom:250px;
+        }
         .left-category a{
             text-decoration:none;
             color:rgb(22,33,62);
@@ -30,10 +34,9 @@ session_start();
                 <a style="text-decoration:none;" href="produkpage.phps"><h5 class="judul-sub">PRODUK TERBARU</h5></a>
                 <hr>
             <div class="row">
-                <?php $i=1;
+                <?php
                 $ambil = $koneksi->query("SELECT * FROM produk ORDER BY pr_id DESC ");?>
-                <?php  while($perproduk = $ambil->fetch_assoc()){?>
-                <?php if($i<=8): ?>
+                <?php  while($perproduk = mysqli_fetch_assoc($ambil)){?>
                 <div class="col-lg-3 col-xs-12 col-sm-6 mb-3 text-center">
                     <div class="card h-100">
                         <img class="card-img-top" src="foto-webinar/<?= $perproduk['pr_gambar']?>" alt="Card image cap">
@@ -43,8 +46,7 @@ session_start();
                         </div>
                     </div>
                 </div>
-                <?php $i++;
-                endif;
+                <?php 
             } ?>
             </div>
         </div>
